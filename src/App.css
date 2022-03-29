@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.App {
+  position: relative;
+}
+
+.head__text {
+  text-align: center;
+  margin: 80px 0 60px 0;
+}
+
+/* Navbar */
+
+.navbar {
+  background-color: black;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.burger-btn {
+  width: 25px;
+  height: 20px;
+  margin: 20px 0 0 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.burger-btn > span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 25px;
+  background-color: white;
+  height: 2px;
+  transform: translate(0, -50%);
+  transition: all 0.2s;
+}
+
+.burger-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 25px;
+  background-color: white;
+  height: 2px;
+  transition: all 0.4s;
+}
+
+.burger-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 25px;
+  background-color: white;
+  height: 2px;
+  transition: all 0.4s;
+}
+
+.burger-btn.active > span {
+  transform: scale(0) translate(0px, -50%);
+}
+
+.burger-btn.active::after {
+  transform: rotate(45deg) translate(0px, 50%);
+  bottom: 50%;
+}
+
+.burger-btn.active::before {
+  transform: rotate(-45deg) translate(0px, -50%);
+  top: 50%;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  height: 150px;
+  color: white;
+  background-color: rgba(0, 0, 0, 1);
+  justify-content: space-around;
+}
+
+footer li {
+  list-style-type: none;
+  margin: 8px;
+}
+
+footer .material-icons:hover {
+  color: rgba(115, 121, 145, 0.8);
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-text p {
+  margin: 5px;
+}
